@@ -33,4 +33,4 @@ prompt Creando fragmentos para igcg_s2
 prompt =====================================
 
 connect autos_bdd/gali123@igcg_s2
-@s-03-autos-igcg-s1-ddl.sql
+@s-03-autos-igcg-s2-ddl.sql
