@@ -20,5 +20,5 @@ prompt Creando al usuario autos_bdd
 create user autos_bdd identified by gali123 quota unlimited on users;
 
 prompt Otorgando privilegios a autos_bdd
-grant create SESSION, create table, create SEQUENCE, create view, create synonym, create database link
+grant create SESSION, create table,create trigger, create procedure,create SEQUENCE, create view, create synonym, create database link
 to autos_bdd;
