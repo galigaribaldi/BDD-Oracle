@@ -1,6 +1,7 @@
 --@Autor:            Cabrera Garibaldi Hernan Galileo
 --@Fecha creación:   04/02/2021
 --@Descripción:      Definición de tablas temporales para manejo de datos BLOB
+
 Prompt eliminando tablas en caso de existir
 declare
     cursor cur_tablas is
