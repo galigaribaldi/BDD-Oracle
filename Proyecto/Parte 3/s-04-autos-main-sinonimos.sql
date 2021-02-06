@@ -8,27 +8,27 @@ whenever sqlerror exit rollback;
 prompt =====================================
 prompt Creando sinonimos para hgcg_s1
 prompt =====================================
-connect autos_bdd/gali123@hgcg_s1
+connect autos_bdd/autos_bdd@hgcg_s1
 @s-04-autos-hgcg-s1-sinonimos.sql
 @s-04-autos-valida-sinonimos.sql
 
 prompt =====================================
 prompt Creando sinonimos para hgcg_s2
 prompt =====================================
-connect autos_bdd/gali123@hgcg_s2
+connect autos_bdd/autos_bdd@hgcg_s2
 @s-04-autos-hgcg-s2-sinonimos.sql
 @s-04-autos-valida-sinonimos.sql
 
 prompt =====================================
 prompt Creando sinonimos para igcg_s1
 prompt =====================================
-connect autos_bdd/gali123@igcg_s1
+connect autos_bdd/autos_bdd@igcg_s1
 @s-04-autos-igcg-s1-sinonimos.sql
 @s-04-autos-valida-sinonimos.sql
 
 prompt =====================================
 prompt Creando sinonimos para igcg_s2
 prompt =====================================
-connect autos_bdd/gali123@igcg_s2
+connect autos_bdd/autos_bdd@igcg_s2
 @s-04-autos-igcg-s2-sinonimos.sql
 @s-04-autos-valida-sinonimos.sql

@@ -13,7 +13,7 @@ begin
         ---------------------------------------------------------------------------            
         when inserting then
         ---Condicion para inserar en la clave
-            if :new.clave != '0000' then
+            if :new.clave != '00000' then
                 select count(*) into v_count
                 from pais_f2 where pais_id = :new.pais_id;
                 --Localmente en sucursal_f2
@@ -35,7 +35,7 @@ begin
                         raise_application_error(-20020,'Eror en la tabla padre fragmento');
                     end if;
                 end if;
-            ELSIF :new.clave = '0000' THEN
+            ELSIF :new.clave = '00000' THEN
                 ---Directamente a Sucursal F3
                 insert into sucursal_f3(sucursal_id, nombre, clave, sucursal_anexa_id, pais_id)
                 values(:new.sucursal_id, :new.nombre, :new.clave, :new.sucursal_anexa_id, :new.pais_id);

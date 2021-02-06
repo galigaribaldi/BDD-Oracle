@@ -43,14 +43,14 @@ begin
         --En el caso de eliminar
         ---------------------------------------------------------------------------        
         when deleting then 
-            if to_char(:new.fecha_status, 'yyyy') > '2010' then 
+            if to_char(:old.fecha_status, 'yyyy') > '2010' then 
                 -- Se elimina en historico_status_f1
                 delete from historico_status_auto_f1 where historico_status_id = :old.historico_status_id;
-            elsif to_char(:new.fecha_status, 'yyyy') <= '2010' then 
+            elsif to_char(:old.fecha_status, 'yyyy') <= '2010' then 
                 -- Se elimina en historico_status_f2
                 delete from historico_status_auto_f2 where historico_status_id = :old.historico_status_id;
             else 
-                raise_application_error(-20010, 'Solo estan permitidas las claves AME y EUR');
+                raise_application_error(-20010, 'Formato de fecha mal: ');
             end if;
     end case;
 end;

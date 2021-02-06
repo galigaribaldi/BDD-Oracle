@@ -38,13 +38,13 @@ begin
         ---------------------------------------------------------------------------        
         when deleting then
             ---Cliente f1
-            if upper(substr(:new.ap_paterno,1,1)) between 'A' and 'I' THEN
+            if upper(substr(:old.ap_paterno,1,1)) between 'A' and 'I' THEN
                 delete from cliente_f1 where cliente_id = :old.cliente_id;
             ---Cliente f2
-            elsif upper(substr(:new.ap_paterno,1,1)) between 'J' and 'Q' THEN
+            elsif upper(substr(:old.ap_paterno,1,1)) between 'J' and 'Q' THEN
                 delete from cliente_f2 where cliente_id = :old.cliente_id;
             ---Cliente f3
-            elsif upper(substr(:new.ap_paterno,1,1)) between 'R' and 'Z' THEN
+            elsif upper(substr(:old.ap_paterno,1,1)) between 'R' and 'Z' THEN
                 delete from cliente_f3 where cliente_id = :old.cliente_id;
             ---Error
             end if;

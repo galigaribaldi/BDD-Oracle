@@ -18,16 +18,16 @@ begin
             and upper(tipo) = 'C';
             --- insertamos localmente
             if v_count > 0 THEN
-                insert into auto_carga_f1(auto_id, peso_maximo, volumen, tipo_consumible)
-                values(:new.auto_id, :new.peso_maximo, :new.volumen, :new.tipo_consumible);
+                insert into auto_carga_f1(auto_id, peso_maximo, volumen, TIPO_COMBUSTIBLE)
+                values(:new.auto_id, :new.peso_maximo, :new.volumen, :new.TIPO_COMBUSTIBLE);
             else
                 ---Reomtamente 
                 select count(*) into v_count
                 from auto_f2 where auto_id = :new.auto_id
                 and upper(tipo) = 'C';
                 if v_count > 0 THEN
-                    insert into auto_carga_f2(auto_id, peso_maximo, volumen, tipo_consumible)
-                values(:new.auto_id, :new.peso_maximo, :new.volumen, :new.tipo_consumible);
+                    insert into auto_carga_f2(auto_id, peso_maximo, volumen, TIPO_COMBUSTIBLE)
+                values(:new.auto_id, :new.peso_maximo, :new.volumen, :new.TIPO_COMBUSTIBLE);
                 else
                     --ERROR
                     raise_application_error(-20020, 'No se encontro el registro padre ');

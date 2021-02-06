@@ -9,7 +9,7 @@ prompt ===========================================
 prompt Creando vistas para hgcg_s1
 prompt ===========================================
 
-connect autos_bdd/gali123@hgcg_s1
+connect autos_bdd/autos_bdd@hgcg_s1
 prompt creando vistas que no requieren manejo de BLOBs
 @s-05-autos-vistas.sql
 
@@ -26,7 +26,7 @@ prompt ===========================================
 prompt Creando vistas para hgcg_s2
 prompt ===========================================
 
-connect autos_bdd/gali123@hgcg_s2
+connect autos_bdd/autos_bdd@hgcg_s2
 prompt creando vistas que no requieren manejo de BLOBs
 @s-05-autos-vistas.sql
 
@@ -42,7 +42,7 @@ prompt creando vistas con soporte para BLOBs
 prompt ===========================================
 prompt Creando vistas para igcg_s1
 prompt ===========================================
-connect autos_bdd/gali123@igcg_s1
+connect autos_bdd/autos_bdd@igcg_s1
 
 prompt creando vistas que no requieren manejo de BLOBs
 @s-05-autos-vistas.sql
@@ -60,7 +60,7 @@ prompt ===========================================
 prompt Creando vistas para igcg_s2
 prompt ===========================================
 
-connect autos_bdd/gali123@igcg_s2
+connect autos_bdd/autos_bdd@igcg_s2
 prompt creando vistas que no requieren manejo de BLOBs
 @s-05-autos-vistas.sql
 

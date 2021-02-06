@@ -16,10 +16,10 @@ create or replace synonym sucursal_f3 for sucursal_f3_igcg_s1;
 
 prompt Creando Sinonimos para Status Auto
 -- Status Auto -> 4
-create or replace synonym status_auto_f1 for status_auto_f1_hgcg_s1@hgcg_s1;
-create or replace synonym status_auto_f2 for status_auto_f2_hgcg_s2@hgcg_s2;
-create or replace synonym status_auto_f3 for status_auto_f1_igcg_s1;
-create or replace synonym status_auto_f4 for status_auto_f2_igcg_a2@igcg_s2;
+--create or replace synonym status_auto_f1 for status_auto_f1_hgcg_s1@hgcg_s1;
+--create or replace synonym status_auto_f2 for status_auto_f2_hgcg_s2@hgcg_s2;
+--create or replace synonym status_auto_f3 for status_auto_f1_igcg_s1;
+--create or replace synonym status_auto_f4 for status_auto_f2_igcg_a2@igcg_s2;
 
 prompt Creando Sinonimos para auto
 -- Auto -> 3

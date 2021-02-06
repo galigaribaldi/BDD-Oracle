@@ -10,7 +10,7 @@ Prompt ============================
 
 --Ligas en la pdb hgcg_s1
 Prompt Creando ligas en hgcg_s1
-connect autos_bdd/gali123@hgcg_s1
+connect autos_bdd/autos_bdd@hgcg_s1
 -- PDB local
 create database link hgcg_s2.fi.unam using 'HGCG_S2';
 --PDB remotas
@@ -23,7 +23,7 @@ Prompt ============================
 
 --Ligas en la pdb hgcg_s2
 Prompt Creando ligas en hgcg_s2
-connect autos_bdd/gali123@hgcg_s2
+connect autos_bdd/autos_bdd@hgcg_s2
 -- PDB local
 create database link hgcg_s1.fi.unam using 'HGCG_S1';
 --PDB remotas
@@ -36,7 +36,7 @@ Prompt ============================
 
 --Ligas en la pdb igcg_s1
 Prompt Creando ligas en igcg_s1
-connect autos_bdd/gali123@igcg_s1
+connect autos_bdd/autos_bdd@igcg_s1
 -- PDB local
 Create database link igcg_s2.fi.unam using 'IGCG_S2';
 --PDB remotas
@@ -48,7 +48,7 @@ Prompt Creando ligas en igcg_s2
 Prompt ============================
 --Ligas en la pdb igcg_s2
 Prompt Creando ligas en igcg_s2
-connect autos_bdd/gali123@igcg_s2
+connect autos_bdd/autos_bdd@igcg_s2
 -- PDB local
 Create database link igcg_s1.fi.unam using 'IGCG_S1';
 --PDB remotas

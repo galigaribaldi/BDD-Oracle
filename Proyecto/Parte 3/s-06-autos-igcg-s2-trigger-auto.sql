@@ -19,9 +19,9 @@ begin
     if v_count > 0 then 
       -- Se realiza insercion remota
       insert into auto_f1( auto_id, anio, num_serie, tipo, precio,
-        fecha_status, sucursal_id, status_auto, modelo_id)
+        fecha_status, sucursal_id, status_auto_id, modelo_id)
       values( :new.auto_id, :new.anio, :new.num_serie, :new.tipo, :new.precio,
-        :new.fecha_status, :new.sucursal_id, :new.status_auto,
+        :new.fecha_status, :new.sucursal_id, :new.status_auto_id,
         :new.modelo_id);
     else 
       select count(*) into v_count 
@@ -31,9 +31,9 @@ begin
       if v_count > 0 then 
         -- Se inserta en auto_f2 (remoto)
       insert into auto_f2( auto_id, anio, num_serie, tipo, precio,
-        fecha_status, sucursal_id, status_auto, modelo_id)
+        fecha_status, sucursal_id, status_auto_id, modelo_id)
       values( :new.auto_id, :new.anio, :new.num_serie, :new.tipo, :new.precio,
-        :new.fecha_status, :new.sucursal_id, :new.status_auto,
+        :new.fecha_status, :new.sucursal_id, :new.status_auto_id,
         :new.modelo_id);
       else 
         -- No cumple con el criterio de frag derivada

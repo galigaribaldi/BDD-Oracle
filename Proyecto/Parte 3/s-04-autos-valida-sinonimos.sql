@@ -15,13 +15,13 @@ select
   (select count(*) from sucursal_f3) as sucursal_f3
 from dual;
 
-Prompt validando sinonimos para status Auto
-select
-  (select count(*) from status_auto_f1) as status_auto_f1,
-  (select count(*) from status_auto_f2) as status_auto_f2,
-  (select count(*) from status_auto_f3) as status_auto_f3,
-  (select count(*) from status_auto_f3) as status_auto_f4
-from dual;
+--Prompt validando sinonimos para status Auto
+--select
+--  (select count(*) from status_auto) as status_auto_f1,
+--  (select count(*) from status_auto) as status_auto_f2,
+--  (select count(*) from status_auto) as status_auto_f3,
+-- (select count(*) from status_auto) as status_auto_f4
+--from dual;
 
 Prompt validando sinonimos para  Auto
 select

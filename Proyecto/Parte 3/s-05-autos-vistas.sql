@@ -21,19 +21,20 @@ create or replace view sucursal AS
     select sucursal_id, nombre, clave, sucursal_anexa_id, pais_id
     from sucursal_f3;
 --Vista para Status Auto
+/*
 create or replace view status_auto AS
-    select status_auto, clave, descripcion
-    from status_auto_f1 
+    select status_auto_id, clave, descripcion
+    from status_auto
     union ALL
-    select status_auto, clave, descripcion
-    from status_auto_f2 
+    select status_auto_id, clave, descripcion
+    from status_auto
     union ALL
-    select status_id, clave, descripcion
+    select status_auto_id, clave, descripcion
     from status_auto_f3
     union ALL
     select status_auto_id as status_auto, clave, descripcion
     from status_auto_f4;
-
+*/
 -------------------------------------------------------------------
 ---Vista de auto no puesta puesto que lleva un BLOB
 -------------------------------------------------------------------
@@ -49,7 +50,7 @@ create or replace view marca AS
     SELECT marca_id, clave, descripcion, activo
     from marca_r1;
 
-/*
+
 --Vista para Marca R1
 create or replace view marca AS
     SELECT marca_id, clave, descripcion, activo
@@ -69,7 +70,7 @@ create or replace view marca AS
 create or replace view marca AS
     SELECT marca_id, clave, descripcion, activo
     from marca_r4;
-*/
+
 /*
 --Vista por modelo
 create or REPLACE view modelo AS
@@ -79,13 +80,13 @@ create or REPLACE view modelo AS
 --Vista por modelo
 create or REPLACE view modelo AS
     select modelo_id, clave, descripcion, activo, marca_id
-    from modelo_f1;
+    from modelo_r1;
 -- vista auto_Carga
 create or REPLACE view auto_carga AS
-    select auto_id, peso_maximo, volumen, TIPO_CONSUMIBLE
+    select auto_id, peso_maximo, volumen, TIPO_COMBUSTIBLE
     from auto_carga_f1
     union ALL
-    select auto_id, peso_maximo, volumen, TIPO_CONSUMIBLE
+    select auto_id, peso_maximo, volumen, TIPO_COMBUSTIBLE
     from auto_carga_f2;
 
 -- Vista auto particular

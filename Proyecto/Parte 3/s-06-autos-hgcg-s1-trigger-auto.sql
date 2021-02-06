@@ -17,15 +17,15 @@ begin
             from sucursal_f1 where sucursal_id = :new.sucursal_id;
             --- insertamos localmente
             if v_count > 0 THEN
-                insert into auto_f1(auto_id, anio, num_serie, tipo, precio, fecha_status, modelo_id, status_auto, sucursal_id)
-                values(:new.auto_id, :new.anio, :new.num_serie, :new.tipo, :new.precio, :new.fecha_status, :new.modelo_id, :new.status_auto, :new.sucursal_id);
+                insert into auto_f1(auto_id, anio, num_serie, tipo, precio, fecha_status, modelo_id, status_auto_id, sucursal_id)
+                values(:new.auto_id, :new.anio, :new.num_serie, :new.tipo, :new.precio, :new.fecha_status, :new.modelo_id, :new.status_auto_id, :new.sucursal_id);
             else
                 ---Reomtamente 
                 select count(*) into v_count
                 from sucursal_f2 where sucursal_id = :new.sucursal_id;
                 if v_count > 0 THEN
-                    insert into auto_f2(auto_id, anio, num_serie, tipo, precio, fecha_status, modelo_id, status_auto, sucursal_id)
-                    values(:new.auto_id, :new.anio, :new.num_serie, :new.tipo, :new.precio, :new.fecha_status, :new.modelo_id, :new.status_auto, :new.sucursal_id);                    
+                    insert into auto_f2(auto_id, anio, num_serie, tipo, precio, fecha_status, modelo_id, status_auto_id, sucursal_id)
+                    values(:new.auto_id, :new.anio, :new.num_serie, :new.tipo, :new.precio, :new.fecha_status, :new.modelo_id, :new.status_auto_id, :new.sucursal_id);                    
                 else
                     --ERROR
                     raise_application_error(-20020, 'No se encontro el registro padre ');
