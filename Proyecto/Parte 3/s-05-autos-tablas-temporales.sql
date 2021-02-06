@@ -52,6 +52,8 @@ Prompt tablas temporales para la tabla pago_auto_f2
 create global temporary table ti_pago_auto_f2(
     cliente_id number(10,0),
     auto_id number(10,0),
+    fecha_pago date not null,
+    importe number(8,2) not null,
     recibo_pago blob not null,
     constraint ti_pago_auto_f2_pk primary key (cliente_id,auto_id)
 ) on commit preserve rows;
