@@ -38,7 +38,7 @@ create or replace view status_auto AS
 ---Vista de auto no puesta puesto que lleva un BLOB
 -------------------------------------------------------------------
 create or replace view historico_status_auto AS
-    select historico_status_id, FECHA_STATUS, auto_id, status_id
+    select historico_status_id, FECHA_STATUS, auto_id, status_auto_id
     from historico_status_auto_f1
     union all
     select historico_status_id, FECHA_STATUS, auto_id, status_auto_id
