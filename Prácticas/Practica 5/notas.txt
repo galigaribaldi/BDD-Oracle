@@ -1,0 +1,5 @@
+Posicionarse en la carpeta donde están los Scripts
+
+Ejecutar
+sqlplus /nolog
+@Nombre_Del_Script
